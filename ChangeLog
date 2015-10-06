@@ -1,3 +1,11 @@
+2015-10-06  Rolf K. <abstractstar at gmail dot com>
+    * Customized flacify and InfoFile.pm for my personal needs:
+    
+    * Segues are marked with "->", not ">", in the title tag (and not removed
+    from the title!)
+
+
+    
 2005-06-03  Caleb Epstein  <cae at bklyn dot org>
 
 	* debian/changelog, INSTALL, README: Updates for version 3.0
