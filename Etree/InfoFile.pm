@@ -316,7 +316,7 @@ sub parsetitle {
    $title =~ s/\s+-\s*$//;
 
    # Strip off any trailing segue marker
-   # $title =~ s/\s*(-*\>)\s*$/ $segue = $1; "" /e;
+   $title =~ s/\s*(-*\>)\s*$/ $segue = $1; /e;
 
    # Strip off any "notes" indicators like @, #, $, %, ^, and *
    $title =~ s/\s*([\*\@\#\$\%\^]+)\s*$/ $notes = $1; "" /e;
