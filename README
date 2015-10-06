@@ -3,10 +3,17 @@
  / _ \ __| '__/ _ \/ _ \_____/ __|/ __| '__| | '_ \| __/ __|
 |  __/ |_| | |  __/  __/_____\__ \ (__| |  | | |_) | |_\__ \
  \___|\__|_|  \___|\___|     |___/\___|_|  |_| .__/ \__|___/
-                                             |_| V3.2
+                                             |_| V3.2.1
 
-Announcing release 3.2 of etree-scripts, a set of (mostly) Perl
-scripts for lossless audio freaks who get busy on the command line.
+This is a fork of etree-scripts v3.2, customized to my own personal
+preferences.
+
+etree-scripts is a set of (mostly) Perl scripts for lossless audio
+freaks who get busy on the command line.
+
+Changes since version 3.2:
+
+* Include the segue marker in the title tag, and change it to "->".
 
 Changes since version 3.1:
 
