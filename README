@@ -14,6 +14,7 @@ freaks who get busy on the command line.
 Changes since version 3.2:
 
 * Include the segue marker in the title tag, and change it to "->".
+* Also works when a song has a segue marker and a note (in that order).
 
 Changes since version 3.1:
 
