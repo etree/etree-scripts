@@ -26,6 +26,7 @@ my $debug = 0;
 my $dryrun = 0;
 my $tagdiscs = 0;
 my $replay_gain = 1;
+my $sector_align = 0;
 my $logfile;
 
 my %EXES = ("unshn" => undef,
@@ -63,6 +64,7 @@ GetOptions ("debug!" => \$debug,
 	    "help!" => sub { exit system ("perldoc", $0) },
 	    "version!" => sub { version (); exit (0) },
 	    "replay-gain!" => \$replay_gain,
+	    "sector-align!" => \$sector_align,
 	    "tag=s%" => \%TAGFORMAT,
 	    "log=s" => \$logfile);
 
@@ -287,11 +289,15 @@ sub convert_files {
 
 	 # Compress the WAV files to FLAC files, deleting as we go.
 	 # Ensure CD sector alignment
-	 my @CMD = ("flac", "--sector-align", "--delete-input-file");
+	 my @CMD = ("flac", "--delete-input-file");
 
 	 if ($replay_gain) {
 	    push (@CMD, "--replay-gain");
 	 }
+
+	 if ($sector_align) {
+	     push(@CMD, "--sector-align");
+     }
 
 	 my $status = run_command (@CMD, @FILES);
 
