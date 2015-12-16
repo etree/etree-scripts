@@ -3,7 +3,7 @@ use Module::Build;
 my $build = Module::Build->new (
     module_name => 'etree-scripts',
     license => 'perl',
-    dist_version => '3.2',
+    dist_version => '3.2.1',
     dist_abstract => "Useful scripts for managing, converting, " .
 	"and burning losslessly compressed audio files",
     dist_author => 'Caleb Epstein <caleb.epstein@gmail.com>',

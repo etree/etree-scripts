@@ -315,11 +315,11 @@ sub parsetitle {
    # dash, whitespace then the track timing.
    $title =~ s/\s+-\s*$//;
 
-   # Strip off any trailing segue marker
-   $title =~ s/\s*(-*\>)\s*$/ $segue = $1; "" /e;
-
    # Strip off any "notes" indicators like @, #, $, %, ^, and *
    $title =~ s/\s*([\*\@\#\$\%\^]+)\s*$/ $notes = $1; "" /e;
+
+   # Strip off any trailing segue marker
+   $title =~ s/\s*(-*\>)\s*$/ $segue = $1; "" /e;
 
    # remove leading and trailing whitespace
    $title =~ s/^\s+//; $title =~ s/\s+$//;
